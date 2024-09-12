@@ -11,7 +11,8 @@
     "build:dev": "npm run build && npm run preview",
     "build:docker": "vite build --mode docker",
     "build:staging": "vite build --mode staging",
-    "build:prod": "vite build --mode prod"
+    "build:prod": "vite build --mode prod",
+    "build:windows": "Set REACT_APP_ENV=dev&& webpack serve --mode development"
   },
   "dependencies": {
     "@apollo/client": "^3.9.6",
