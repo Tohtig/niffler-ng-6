@@ -3,7 +3,6 @@ package guru.qa.niffler.page;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class CongratulationsPage {
@@ -16,13 +15,7 @@ public class CongratulationsPage {
         return new LoginPage();
     }
 
-    public CongratulationsPage checkThatPageContainsCongratulations() {
+    public void checkThatPageContainsCongratulations() {
         congratulationsText.shouldHave(text("Congratulations! You've registered!"));
-        return this;
-    }
-
-    public CongratulationsPage checkThat() {
-        congratulationsText.shouldHave(text("Congratulations! You've registered!"));
-        return this;
     }
 }

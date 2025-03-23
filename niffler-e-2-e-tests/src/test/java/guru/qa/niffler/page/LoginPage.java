@@ -22,8 +22,7 @@ public class LoginPage {
     registerButton.click();
   }
 
-  public LoginPage checkThatLoginErrorIsDisplayed() {
+  public void checkThatLoginErrorIsDisplayed() {
     $("p.form__error").shouldHave(text("Неверные учетные данные пользователя"));
-    return this;
   }
 }

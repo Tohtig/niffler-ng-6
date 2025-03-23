@@ -4,7 +4,6 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Condition.visible;
 
 public class RegisterPage {
     private final SelenideElement usernameInput = $("#username");
@@ -38,8 +37,7 @@ public class RegisterPage {
         return this;
     }
 
-    public RegisterPage checkThatPageContainsError(String errorMessage) {
+    public void checkThatPageContainsError(String errorMessage) {
         $("span.form__error").shouldHave(text(errorMessage));
-        return this;
     }
 }
